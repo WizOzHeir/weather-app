@@ -1,0 +1,37 @@
+<div class="card bg-light text-dark mb-3" *ngIf="forecast">
+    <div class="card-header fw-bold text-center">
+        <h3 class="mb-0">{{ forecast.cityName }}</h3>
+    </div>
+    <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center justify-content-center bg-light card">
+            <img [src]="forecast.iconUrl" class="img-fluid rounded-circle weather-icon" [alt]="forecast.description">
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                <div class="text-center">
+                    <h1 class="display-4">{{ forecast.temp }}°{{ forecast.tempUnit}}</h1>
+                    <p class="lead">{{ forecast.description }}</p>
+                </div>
+                <div class="text-end mt-3">
+                    <p class="card-text">
+                        <small class="text-muted">
+                            <fa-icon [icon]="faTemperatureHigh"></fa-icon> High: {{ forecast.maxTemp }}°{{ forecast.tempUnit}} |
+                            <fa-icon [icon]="faTemperatureLow"></fa-icon> Low: {{ forecast.minTemp }}°{{ forecast.tempUnit}}
+                            <br/>
+                            <fa-icon [icon]="faThermometerHalf"></fa-icon> Feels Like: {{ forecast.feelsLike }}°{{ forecast.feelsLikeUnit }} 
+                        </small>
+                    </p>
+                    <hr class="my-2">
+                    <p class="card-text">
+                        <small class="text-muted">
+                            <fa-icon [icon]="faTint"></fa-icon> Humidity: {{ forecast.humidity }}{{ forecast.humidityUnit }} |
+                            <fa-icon [icon]="faWind"></fa-icon> Wind: {{ forecast.windSpeed }}{{ forecast.windSpeedUnit }} |
+                            <fa-icon [icon]="faCloud"></fa-icon> Clouds: {{ forecast.clouds }}
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

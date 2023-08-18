@@ -1,0 +1,4 @@
+<div class="container mt-4">
+    <app-search (searchCity)="onSearch($event)"></app-search>
+    <app-current-forecast-details *ngIf="currentForecastDetails" [forecast]="currentForecastDetails"></app-current-forecast-details>
+</div>

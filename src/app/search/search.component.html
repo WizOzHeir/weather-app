@@ -1,0 +1,6 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" placeholder="Enter city name">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="onSearch()">Search</button>
+    </div>
+</div>
