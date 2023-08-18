@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search',
@@ -6,6 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SearchComponent {
   searchTerm = '';
+  faSearch = faSearch;
 
   @Output() searchCity = new EventEmitter<string>();
 
